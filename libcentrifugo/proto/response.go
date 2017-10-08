@@ -29,9 +29,9 @@ func writeClientInfo(buf *bytebufferpool.ByteBuffer, info *ClientInfo) {
 	}
 
 	if info.ChannelInfo != nil {
-		buf.WriteString(`"channel_info":`)
+		buf.WriteString(`"channel_info":"`)
 		buf.Write(info.ChannelInfo)
-		buf.WriteString(`,`)
+		buf.WriteString(`",`)
 	}
 
 	buf.WriteString(`"user":`)
